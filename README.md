@@ -1,10 +1,15 @@
 # Low-Noise Voltage Control Ring Oscillator using 28nm Technology node
 This repository presents a low phase noise ring based voltage-controlled-oscillator (VCO) for ultra-wide band (UWB) applications. The circuit is implemented in a 28-nm CMOS technology using Synopsis Custom Compiler.
+![image](https://user-images.githubusercontent.com/35188692/155860564-111e682f-d9be-4464-9dc6-4a7cab62911a.png)
+
 # Table of Contents
+
 # Introduction
 Common VCO implementations are LC oscillators and ring oscillators. In integrated circuits, the production of high-performance passive devices (such as inductors) is difficult since these devices occupy a large area and thus LC tank voltage-controlled oscillator becomes inappropriate. Concurrently, Ring Oscillator benefit from the rapid advance of the technology in IC industry, to occupy more and more small area on the chip, while keeping all its appealing characteristics such as the large frequency tuning range, and the good linearity,making it widely used in industrial products and academic designs.
 # Symmetrical Load Differential VCO
+
 # Limitations of the Symmetrical Load Differential VCO
+
 # Proposed Delay Cell (Modified Symmetrical Load Differential VCO)
 There are two additional elements used to design new differential VCO extension-
 swing enhanced block
@@ -20,6 +25,9 @@ After adding the SEB, the output voltage swing is enhanced, but this structure a
 
 First, when the differential input is low, the differential output is high at a certain control voltage . As for the self-excitation tube structure, the source of M6 is at high potential, and the drain connected to the gate of M4 is at low potential. Since the two-stage source of the transistor can be
 interchanged, M6 draws current from, and charges the gate of M4, resulting in the decrease of M4 charge current. On the other hand, when the differential input is high, the differential output is low. In this time, M6 discharges from the gate of M4 to, making the M4 gate potential decreases, resulting in M4 charge current to increase. The self-excited tube M6 alongside M4 function as a negative feedforward, adjusting the linearity and reducing the phase noise.
+
+![image](https://user-images.githubusercontent.com/35188692/155860929-a2111577-a592-4d39-8611-5bf0f35fe310.png)
+
 
 # Tools Used-
 • Synopsys Custom Compiler:
