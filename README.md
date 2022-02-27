@@ -21,6 +21,11 @@ This repository presents a low phase noise ring based voltage-controlled-oscilla
 Common VCO implementations are LC oscillators and ring oscillators. In integrated circuits, the production of high-performance passive devices (such as inductors) is difficult since these devices occupy a large area and thus LC tank voltage-controlled oscillator becomes inappropriate. Concurrently, Ring Oscillator benefit from the rapid advance of the technology in IC industry, to occupy more and more small area on the chip, while keeping all its appealing characteristics such as the large frequency tuning range, and the good linearity,making it widely used in industrial products and academic designs.
 # Symmetrical Load Differential VCO
 
+![image](https://user-images.githubusercontent.com/35188692/155882747-f26eb414-c88b-4f50-b25a-09b98b07b233.png)
+
+Fig.1 PMOS Symmetric Load Differential VCO
+
+
 # Limitations of the Symmetrical Load Differential VCO
 * In the VCO delay unit circuit, the control signal is added to the gate of the tail current tube, in order to achieve a working delay unit with voltage control. Therefore, there is a need to design a new delay unit circuit, so that the cascade of differential VCO has a wide voltage regulation (tuning) range and a full swing output signal.
 * Single-ended ring oscillators suffer from the low phase noise performance and frequency limitations, therefore other architectures can be applied.
@@ -63,17 +68,30 @@ The Synopsys Custom Compiler™ design environment is a modern solution for full
  # Schematics:-
  Initially Schematic of the Proposed Delay cell was implemented and converted into a symbol so that it could be used directly as delay cell from the library and 3-stage ring oscillator can be constructed using this.
 ![image](https://user-images.githubusercontent.com/35188692/155859787-604590eb-0b72-44c4-8c8e-c1658502849a.png)
+Fig.4 Proposed Delay Cell Schematics
+
+![image](https://user-images.githubusercontent.com/35188692/155882176-4947a80c-0a3e-4a32-a263-798c5b8bc44f.png)
+Fig.5 Symbol view of the Delay Cell
 
 ![image](https://user-images.githubusercontent.com/35188692/155859888-e31abf7f-acaf-4fb9-9569-f0b7127b2ab1.png)
+Fig.6 Schematic of Single Stage Delay Cell
 
 ![image](https://user-images.githubusercontent.com/35188692/155859927-5607605f-97dc-4433-a992-d794b52e98ac.png)
+Fig.7 3-Stage Voltage Controlled Ring Oscillator
 
 # Simulations:-
 ## Transient Simulation:-
 
 ![image](https://user-images.githubusercontent.com/35188692/155860028-68c2f7bc-f0bc-49ef-9a46-9ac86d773a13.png)
+Fig.8 Transient Response of a single stage Delay Cell
 
 ![image](https://user-images.githubusercontent.com/35188692/155860047-6bdcfcb9-b617-4de4-8486-3c35f79e0b16.png)
+Fig.9 Transient Response of 3-stage VCO
+
+## Parametric Sweep:- 
+
+![image](https://user-images.githubusercontent.com/35188692/155882240-15a7e9c4-c90c-4b53-9b3f-20cd781b8dbd.png)
+
 
 # Netlist of the Circuit:
 
