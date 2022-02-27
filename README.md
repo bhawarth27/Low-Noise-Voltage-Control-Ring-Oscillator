@@ -19,7 +19,13 @@ This repository presents a low phase noise ring based voltage-controlled-oscilla
 
 # Introduction
 Common VCO implementations are LC oscillators and ring oscillators. In integrated circuits, the production of high-performance passive devices (such as inductors) is difficult since these devices occupy a large area and thus LC tank voltage-controlled oscillator becomes inappropriate. Concurrently, Ring Oscillator benefit from the rapid advance of the technology in IC industry, to occupy more and more small area on the chip, while keeping all its appealing characteristics such as the large frequency tuning range, and the good linearity,making it widely used in industrial products and academic designs.
+
+
+![image](https://user-images.githubusercontent.com/35188692/155887395-090cdf7e-5b5e-4718-b1d9-84ee6c7a11a9.png)
+
 # Symmetrical Load Differential VCO
+
+For VCO's conventional design, due to the wide range of oscillator applications in different environmental requirements, VCO has different structural and performance parameters. The basic circuit structure of this study is designed and implemented using the symmetrical load differential VCO structure.
 
 ![image](https://user-images.githubusercontent.com/35188692/155882747-f26eb414-c88b-4f50-b25a-09b98b07b233.png)
 
@@ -37,6 +43,7 @@ There are two additional elements used to design new differential VCO extension-
 
 [2] SELF-EXCITATED TUBE
 
+![image](https://user-images.githubusercontent.com/35188692/155887047-77af5262-865a-4675-8519-de6ca41a7b49.png)
 
 
 The main idea is to eliminate the drawbacks of the proposed VCO structure, while maintaining their advantages. This combination will help to design a new extension delay structure, so that a cascade of 3 stages of these units constitute a High-Performance Voltage-Controlled Oscillator (HPVCO), characterized by a stable output voltage with a wide range of frequencies controlled by the body bias control voltage.
@@ -81,6 +88,7 @@ Fig.7 3-Stage Voltage Controlled Ring Oscillator
 
 # Simulations:-
 ## Transient Simulation:-
+After creating and saving the schematic go to 'Tools' and open 'Primewave' to start the simulation. In the Primewave select the 'model file' i.e the '28nm PDK's .lib file presentin the HSPICE folder. After this select the 'tran' analysis in the analysis window and give the 'Start', 'Stop', and 'Step Size' parameters and save it. Then add the outputs which needs to be plotted by selecting the nets on the schematic.
 
 ![image](https://user-images.githubusercontent.com/35188692/155860028-68c2f7bc-f0bc-49ef-9a46-9ac86d773a13.png)
 Fig.8 Transient Response of a single stage Delay Cell
@@ -91,6 +99,7 @@ Fig.9 Transient Response of 3-stage VCO
 ## Parametric Sweep:- 
 
 ![image](https://user-images.githubusercontent.com/35188692/155882240-15a7e9c4-c90c-4b53-9b3f-20cd781b8dbd.png)
+Fig.10 Control Voltage vs Frequency graph for 1.2V Supply Voltage
 
 
 # Netlist of the Circuit:
@@ -109,5 +118,4 @@ Refer to the netlist of the 3-Stage Voltage Controll Ring Oscillator here: <a hr
 • <a href='https://www.vlsisystemdesign.com/'>VLSI System Design (VSD) Corp. Pvt. Ltd India</a></br>
 
 # References:
-[1] 
-[2] 
+[1] H. Bazzi, M. A. Chanine, A. Mohsen and A. Harb, "A low-noise voltage-controlled ring oscillator in 28-nm FDSOI technology," 2017 29th International Conference on Microelectronics (ICM), 2017, pp. 1-4, doi: 10.1109/ICM.2017.8268826.
