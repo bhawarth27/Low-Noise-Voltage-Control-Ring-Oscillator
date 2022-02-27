@@ -4,7 +4,7 @@ This repository presents a low phase noise ring based voltage-controlled-oscilla
 
 # Table of Contents
 * [Introduction](#Introduction)
-* [Symmetrical Load Differential VCO](#Symmetrical Load Differential VCO)
+* [Symmetrical Load Differential VCO](#Symmetrical-Load-Differential-VCO)
 * [Limitations of the Symmetrical Load Differential VCO](#Limitations of the Symmetrical Load Differential VCO)
 * [Proposed Delay Cell](#Proposed Delay Cell (Modified Symmetrical Load Differential VCO))
 * [Google SkyWater 130nm](#Google-SkyWater-130nm-PDK)
