@@ -3,7 +3,14 @@ This repository presents a low phase noise ring based voltage-controlled-oscilla
 ![image](https://user-images.githubusercontent.com/35188692/155860564-111e682f-d9be-4464-9dc6-4a7cab62911a.png)
 
 # Table of Contents
-
+* [Introduction](#Introduction)
+* [Reference Circuit Diagram](#Reference-Circuit-Diagram)
+* [Description](#Description)
+* [eSim EDA tool](#eSim-EDA-Tool)
+* [Google SkyWater 130nm](#Google-SkyWater-130nm-PDK)
+* [Schematic Diagram](#Schematic-Diagram)
+* [Spice file](#Spice-file) 
+* [Spice simulation waveforms](#Spice-simulation-waveforms)
 # Introduction
 Common VCO implementations are LC oscillators and ring oscillators. In integrated circuits, the production of high-performance passive devices (such as inductors) is difficult since these devices occupy a large area and thus LC tank voltage-controlled oscillator becomes inappropriate. Concurrently, Ring Oscillator benefit from the rapid advance of the technology in IC industry, to occupy more and more small area on the chip, while keeping all its appealing characteristics such as the large frequency tuning range, and the good linearity,making it widely used in industrial products and academic designs.
 # Symmetrical Load Differential VCO
