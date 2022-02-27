@@ -106,7 +106,7 @@ Fig.10 Control Voltage vs Frequency graph for 1.2V Supply Voltage
 
 Refer to the netlist of the Delay cell here: <a href='differential_CSVCO.cir.out'>Netlist</a>
 
-Refer to the netlist of the 3-Stage Voltage Controll Ring Oscillator here: <a href='Differential_csvco_5stage.cir.out'>Netlist</a>
+Refer to the netlist of the 3-Stage Voltage Controll Ring Oscillator here: <a href='bg_delay_cell_prac1.cir.out'>Netlist</a>
 
 
 # Author:
