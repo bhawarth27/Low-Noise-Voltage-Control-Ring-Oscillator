@@ -9,7 +9,7 @@ This repository presents a low phase noise ring based voltage-controlled-oscilla
 * [Proposed Delay Cell](#Proposed-Delay-Cell-Modified-Symmetrical-Load-Differential-VCO)
 * [Tools Used](#Tools-Used)
 * [Pre-Layout Schematics and Simulations](#Pre-Layout-Schematics-and-Simulations)
-**[Spice file](#Spice-file) 
+* [Spice file](#Spice-file) 
 * [Spice simulation waveforms](#Spice-simulation-waveforms)
 # Introduction
 Common VCO implementations are LC oscillators and ring oscillators. In integrated circuits, the production of high-performance passive devices (such as inductors) is difficult since these devices occupy a large area and thus LC tank voltage-controlled oscillator becomes inappropriate. Concurrently, Ring Oscillator benefit from the rapid advance of the technology in IC industry, to occupy more and more small area on the chip, while keeping all its appealing characteristics such as the large frequency tuning range, and the good linearity,making it widely used in industrial products and academic designs.
@@ -19,22 +19,25 @@ Common VCO implementations are LC oscillators and ring oscillators. In integrate
 
 # Proposed Delay Cell (Modified Symmetrical Load Differential VCO)
 There are two additional elements used to design new differential VCO extension-
-swing enhanced block
-self-excitation tube
+* SWING ENHANCED BLOCK
+* SELF-EXCITATED TUBE
+
 
 The main idea is to eliminate the drawbacks of the proposed VCO structure, while maintaining their advantages. This combination will help to design a new extension delay structure, so that a cascade of 3 stages of these units constitute a High-Performance Voltage-Controlled Oscillator (HPVCO), characterized by a stable output voltage with a wide range of frequencies controlled by the body bias control voltage.
 
-A. Swing Enhanced Block
+* Swing Enhanced Block
+
 As mentioned before the symmetrical load differential VCO has several drawbacks. To overcome these disadvantages, it is necessary to eliminate the correlation between the voltage control regulation and the output voltage of the oscillator. The addition of a CMOS inverter (M1 and M2) to construct a Swing-Enhanced Block (SEB) is the solution to avoid this problem. The structure of this block is a simple inverter, mainly used to enhance the output voltage swing. This Structure provides a stable output voltage swing not effected by the control voltage regulation. The SEB added introduces a new current that may affect the tail current (M8), which drives to the changes of the output frequency. To stabilize the tail current in the design process, there is a need to optimize the width size of M1 and M2.
 
-B. Self-excited Tube
+* Self-Excited Tube
+
 After adding the SEB, the output voltage swing is enhanced, but this structure affects the VCO sensitivity. The reduction of the VCO gain will narrow the frequency tuning range, which is a critical factor in the ring oscillator performance. To keep the advantage of the SEB, VCO sensitivity should be increased to optimize the range of voltage regulation. This issue is solved by adding a self-excited tube, represented by M6, M7 in the proposed design.
 
 First, when the differential input is low, the differential output is high at a certain control voltage . As for the self-excitation tube structure, the source of M6 is at high potential, and the drain connected to the gate of M4 is at low potential. Since the two-stage source of the transistor can be
 interchanged, M6 draws current from, and charges the gate of M4, resulting in the decrease of M4 charge current. On the other hand, when the differential input is high, the differential output is low. In this time, M6 discharges from the gate of M4 to, making the M4 gate potential decreases, resulting in M4 charge current to increase. The self-excited tube M6 alongside M4 function as a negative feedforward, adjusting the linearity and reducing the phase noise.
 
 ![image](https://user-images.githubusercontent.com/35188692/155860929-a2111577-a592-4d39-8611-5bf0f35fe310.png)
-
+Fig.3 3-Stage Voltage Controlled Ring Oscillator
 
 # Tools Used-
 • Synopsys Custom Compiler:
