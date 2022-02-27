@@ -1,0 +1,78 @@
+*  Generated for: PrimeSim
+*  Design library name: bg_vco_1
+*  Design cell name: bg_delay_cell_prac1
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Sat Feb 26 12:05:08 2022
+
+.global gnd!
+********************************************************************************
+* Library          : bg_vco_1
+* Cell             : bg_delay_cell
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt bg_delay_cell vdda vssa vbb vbn vbp vc vin+ vin- vout+ vout-
+xm13 vdda vin+ vout- vbb p105 w=0.3u l=0.09u nf=3 m=1
+xm4 vdda vbp vout- vbb p105 w=0.1u l=0.03u nf=1 m=1
+xm3 vdda net38 vout- vbb p105 w=0.1u l=0.03u nf=1 m=1
+xm2 vdda net33 vout+ vbb p105 w=0.1u l=0.03u nf=1 m=1
+xm14 vout+ vbp vdda vbb p105 w=0.1u l=0.03u nf=1 m=1
+xm15 vout+ vin- vdda vbb p105 w=0.3u l=0.09u nf=3 m=1
+xm12 vout- vin+ vssa vc n105 w=0.1u l=0.03u nf=1 m=1
+xm11 vout- vin+ net48 vc n105 w=0.1u l=0.03u nf=1 m=1
+xm10 net48 vbn vssa vc n105 w=0.1u l=0.03u nf=1 m=1
+xm9 net38 vbp vout- vc n105 w=0.1u l=0.03u nf=1 m=1
+xm8 net33 vbp vout+ vc n105 w=0.1u l=0.03u nf=1 m=1
+xm7 vout+ vin- net48 vc n105 w=0.1u l=0.03u nf=1 m=1
+xm6 vout+ vin- vssa vc n105 w=0.1u l=0.03u nf=1 m=1
+.ends bg_delay_cell
+
+********************************************************************************
+* Library          : bg_vco_1
+* Cell             : bg_delay_cell_prac1
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi2 net28 gnd! net25 net24 net23 net6 net29 net30 vout- vout+ bg_delay_cell
+xi1 net28 gnd! net25 net24 net23 net6 net19 net20 net30 net29 bg_delay_cell
+xi0 net28 gnd! net25 net24 net23 net6 vout+ vout- net20 net19 bg_delay_cell
+v7 net6 gnd! dc=0.5
+v6 net23 gnd! dc=3
+v5 net24 gnd! dc=1
+v4 net25 gnd! dc=2.1
+v3 net28 gnd! dc=1.2
+
+
+
+
+
+
+
+
+.tran '1p' '1n' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(vout+) v(vout-)
+
+.temp 25
+
+.ic  v(vout+)=0  v(vout-)=1
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end
+
